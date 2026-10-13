@@ -2,29 +2,17 @@
 
 An unofficial VR mod for the original PC release of **Hitman: Blood Money**, with a headset view, first-person camera, tracked hands and controller-directed weapon aiming.
 
-**In development. Core gameplay testing and an initial demonstration of the simplified version are being prepared.** This repository is the project's information page. Source code and downloadable builds are not currently published here.
+**In development. A short demo has been recorded showing 6DoF weapons, picking up pistols in both hands, and button-based reloading for the right-hand pistol.** This repository is the project's information page. Source code and downloadable builds are not currently published here.
 
 [Русский](README.md) · [Detailed status](STATUS.md) · [Roadmap](ROADMAP.md) · [Demo checklist](DEMO-CHECKLIST.md)
 
-## Implemented features
+## Shown in the demo
 
-- Headset rendering and head-controlled camera movement.
-- First-person view and recentering.
-- Tracked controllers and in-game arms.
-- Weapon-directed aiming and firing, including independent dual-pistol aiming.
-- Separate button reloads for the left and right hands.
-- Item grabbing, releasing, dropping and hand-to-hand transfer.
-- Support for holding long weapons with both hands.
-- Controller access to menus, the native inventory and VR settings.
-- Experimental scope handling and physical reload mechanisms for multiple weapon families.
+- 6DoF weapon tracking: position and rotation follow the VR controllers.
+- Picking up pistols in both hands.
+- Button-based reloading for the right-hand pistol only.
 
-Implementation and gameplay validation are separate milestones. Headset rendering, stereo and aiming direction were confirmed in earlier play sessions. The current simplified candidate needs its own validation before the demo; item interactions, scopes and hand poses still need work.
-
-## Initial demo scope
-
-The current test candidate uses **button reloads**: A for the right hand and X for the left. Reloading keeps the weapon in its hand and fills it immediately, without a physical magazine gesture or reload animation.
-
-Experimental physical reloads, automatic body crouching and full-body rendering are disabled by default. The first demo focuses on the camera, hands, firing, ordinary movement, reloading and mission loading.
+This is a short demonstration of the current work-in-progress version. It does not establish that other mechanics are ready or that all missions are stable. Left-hand reloading and physical reloading are not demonstrated in this clip.
 
 ## Next milestones
 
@@ -45,7 +33,7 @@ Stereo eyes use sequential game frames; fast motion may produce temporal differe
 
 The primary test setup is **Meta Quest 3S with Quest Link / Air Link on Windows**, using a separately installed copy of the original PC game. Other headset configurations still need testing.
 
-A demonstration video will be added after core validation. No public test-build release date has been announced. Requirements, installation instructions and known issues will accompany a future downloadable build.
+A short demo has been recorded; the video link will be added separately. No public test-build release date has been announced. Requirements, installation instructions and known issues will accompany a future downloadable build.
 
 ## Author and research
 
