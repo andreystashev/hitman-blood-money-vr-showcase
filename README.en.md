@@ -1,42 +1,45 @@
 # Hitman: Blood Money VR
 
-An unofficial VR mod for the original PC release of **Hitman: Blood Money**, with a headset view, first-person camera, tracked hands and controller-directed weapon aiming.
+An unofficial VR mod for the original PC release of **Hitman: Blood Money**, with headset rendering, a first-person camera, tracked hands and controller-directed weapon aiming.
 
-**In development. A short demo has been recorded showing 6DoF weapons, picking up pistols in both hands, and button-based reloading for the right-hand pistol.** This repository is the project's information page. Source code and downloadable builds are not currently published here.
+**Updated October 17, 2026.** The core gameplay loop is implemented; interaction refinement and mission testing continue. The integrated internal baseline is .94, with a periodic-stall fix added in .95. This is the public project information page; source code and downloadable builds are not currently distributed here.
 
-[Русский](README.md) · [Detailed status](STATUS.md) · [Roadmap](ROADMAP.md) · [Demo checklist](DEMO-CHECKLIST.md)
+[Русский](README.md) · [Detailed status](STATUS.md) · [Recent changes](CHANGELOG.md) · [Roadmap](ROADMAP.md) · [Demo checklist](DEMO-CHECKLIST.md)
 
-## Shown in the demo
+## Implemented
 
-- 6DoF weapon tracking: position and rotation follow the VR controllers.
-- Picking up pistols in both hands.
-- Button-based reloading for the right-hand pistol only.
+- Headset rendering, head position and rotation, first-person view, recentering, controller locomotion and physical crouching.
+- Tracked arms, independent dual-weapon aiming, GRIP pickup, release, throwing and hand-to-hand transfer.
+- Controller access to the native inventory, with health, alert level, held item names and ammunition shown inside it. English button hints and pickup outlines are implemented.
+- Automatic NPC inventory drops, physical body gripping and movement, outfit actions and body-hiding interactions.
+- Eye-proximity scope activation, with fixes for left-hand aiming and scope exit on reload, empty magazines and release.
+- Native button reload and a separate experimental physical reload system using magazines and weapon mechanisms.
+- Adaptation of scripted scenes and Requiem, a camera/mirror-arm startup fix, and incremental scene-item discovery to avoid periodic stalls.
 
-This is a short demonstration of the current work-in-progress version. It does not establish that other mechanics are ready or that all missions are stable. Left-hand reloading and physical reloading are not demonstrated in this clip.
+Implementation, gameplay confirmation and full release readiness are different milestones. See the [status tables](STATUS.md) for their boundaries.
 
-## Next milestones
+## Validation so far
 
-- Validate core gameplay across multiple missions and repeated loads.
-- Improve grip alignment, item pickup and arm poses.
-- Refine two-hand support, scopes and contextual interactions.
-- Improve stereo consistency and rendering performance.
-- Refine physical magazine, cartridge, cylinder, pump and bolt interactions.
-- Develop a VR inventory interface, fiber-wire interaction, sounds and haptics.
+The user confirmed automatic NPC drops, left-hand scope fixes and rendered-position item release in tested scenarios. On October 17, the user confirmed that periodic stalls and arm flashes were resolved in the tested .95 scene. The .94 startup check reached ready VR components and successful headset frame submission. The .95 full automated suite passed **136 checks**. These results do not establish compatibility with every mission, weapon or gesture.
 
-See the [roadmap](ROADMAP.md) for priorities and acceptance criteria.
+The previously recorded short demo shows only **6DoF weapons, picking up pistols in both hands and button-reloading the right pistol**. It does not demonstrate the later features. A video link has not yet been added.
 
-## Current limitations
+## Still unfinished
 
-Stereo eyes use sequential game frames; fast motion may produce temporal differences between the views. Arm alignment and item grabbing still have reported issues. Scopes currently use the game's fullscreen zoom, without a separate live scope-lens view. Physical reloads are experimental and need further animation, feedback and persistence work. Compatibility targets a particular executable build, and full mission and weapon coverage has not been validated.
+- Consistent two-hand foregrips, grip alignment, elbow poses and mirror arms across weapon models.
+- In-headset regression of the new inventory dashboard, action hints, outlines and right-hand retention across missions.
+- A stereo pair from one game state and a transfer path without the current CPU copy.
+- A completed universal live scope-lens view.
+- Physical reload refinement across weapon families, intermediate-state persistence, complete feedback and haptics. Some native magazine models, mechanism animations and sounds already exist.
+- Free two-hand fiber-wire interaction and a separate spatial inventory wheel.
+- Full mission/load-cycle coverage and validation of other headsets.
 
-## Availability
+Living-hostage grips, physical melee and selected scene-prop interactions remain experimental.
 
-The primary test setup is **Meta Quest 3S with Quest Link / Air Link on Windows**, using a separately installed copy of the original PC game. Other headset configurations still need testing.
+## Compatibility and availability
 
-A short demo has been recorded; the video link will be added separately. No public test-build release date has been announced. Requirements, installation instructions and known issues will accompany a future downloadable build.
+The primary test setup is **Meta Quest 3S via Quest Link / Air Link on Windows**, using a separately installed original PC game with a supported executable. Other headsets and game versions are not claimed as tested.
 
-## Author and research
+The internal `stable-0.1.8.94` tag identifies a reproducible development baseline, not a public release validated through the entire game. No public build release date has been announced.
 
-Developed by [andreystashev](https://github.com/andreystashev). Reverse-engineering research draws in part on [ReGlacier / ReHitman](https://github.com/ReGlacier/ReHitman).
-
-Updated **October 13, 2026**. Priorities may change with playtest findings.
+Development: [andreystashev](https://github.com/andreystashev). Research includes [ReGlacier / ReHitman](https://github.com/ReGlacier/ReHitman).
