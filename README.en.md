@@ -1,44 +1,56 @@
 # Hitman: Blood Money VR
 
-An unofficial VR mod for the original PC release of **Hitman: Blood Money**. Look around and lean in a headset, aim weapons with your hands, pick up items and interact with the world using VR controllers.
+An unofficial VR mod for the original PC release of **Hitman: Blood Money**:
+head-tracked first-person gameplay, controller aiming, physical items and world interactions.
 
-**Development update — October 17, 2026.**
+**Development update — October 18, 2026.**
 
-[Русский](README.md) · [Features and limitations](STATUS.md) · [Update history](CHANGELOG.md) · [Roadmap](ROADMAP.md)
+[Русский](README.md) · [Detailed status, Russian](STATUS.md) · [Development journal, Russian](DEVELOPMENT.md) · [Roadmap, Russian](ROADMAP.md)
 
-## What is implemented
+## Implemented foundations
 
-- First-person gameplay with head position and rotation tracking.
-- Controller-directed weapon aiming, including independently aimed dual pistols.
-- Picking up, holding, throwing and transferring items between hands.
-- Supporting long weapons with a second hand.
-- Controller locomotion and physical crouching.
-- Controller access to menus and the inventory.
-- Gripping and moving bodies, changing outfits and using the game's body-hiding actions.
-- Scope activation by bringing a weapon to your eye.
+- Head position and rotation tracking, controller locomotion and physical crouching.
+- Controller-directed aiming, independently aimed pistols and second-hand support for long guns.
+- Item pickup, holding, hand transfers and throws; damage from thrown weapons and magazines.
+- Motion-driven melee weapon strikes and punches while holding an item.
+- Custom reload schemes, including revolvers, SMGs and larger weapons, plus pistol casings.
+- Scope activation by bringing the weapon to the eye.
+- Body handling, outfit changes, hiding bodies, weapon crates and contextual object buttons.
+- Controller menus, inventory, hints, outlines and map access.
+- Work on the stun gun and fiber wire, and throwing/retrieving blades from bodies.
 
-Physical reloads, melee weapon strikes and living-hostage grips are implemented and still being refined. See the [feature status](STATUS.md) for details.
+These are implemented foundations, not a claim that every weapon and mission is complete.
 
-## Recent improvements
+## Latest status and known issues
 
-**Interface.** Health, alert level, item names and ammunition now appear inside the inventory. Nearby objects have button hints, and available pickups are highlighted with an outline.
+The latest developer checklist marks the reported dialogue, ladder, pipe,
+ledge and window camera issues as resolved, alongside outfit access, elevator
+menus, shaft access, legacy UI display and the reported vegetation/palm rendering problems.
 
-**Interactions.** NPC inventory drops are automatic. Fixes address the right-hand weapon disappearing after inventory use, gripping sleeping bodies and item position on release.
+Current regressions include hostages walking in place instead of following
+the hand, unintended knockouts during hostage grabs, and missing expected
+alerts after throws. Elevator physics and moving-object attachment still need
+work. The opera video is not visible in the headset; the rifle briefcase does
+not open, and the air rifle needs a reload fix.
 
-**Weapons and arms.** Left-hand scope aiming and scope exit during reloads, empty magazines and weapon release have received fixes. Elbow poses, grips and mirror arms are still being refined.
-
-**Startup and smoothness.** A conflict that prevented VR startup after mirror-arm changes has been fixed. Scene-item discovery has been improved to address periodic stalls on large levels.
-
-## Work in progress
-
-The next priorities are consistent two-hand grips across weapon models, physical reload refinement and broader mission testing. Items can still bounce or fall through some surfaces. A separate live scope-lens view, improved stereo rendering, haptics and free two-hand fiber-wire interaction remain planned.
+Further work covers grips, scope entry/exit, inventory and configurable hidden
+UI, magazines, melee sound and reactions, kill statistics, and body visibility
+options. Blur, gamma, hideout glare and the reported halving of frame rate
+remain investigation tasks. The [development journal](DEVELOPMENT.md) records
+progress and regressions separately.
 
 ## Compatibility and availability
 
-Development targets **Windows and the original PC game**. The primary test headset is **Meta Quest 3S via Quest Link / Air Link**. Other headsets have not yet been validated.
+The main test setup is **Windows, the original PC game and Meta Quest 3S via
+Quest Link / Air Link**. Other executables, game releases and headsets still
+need validation.
 
-The project is in development. No public test-build date has been announced, and downloadable builds and source code are not currently available on this page.
+This is a public project-description repository. **Mod source code and public
+builds are not hosted here yet.** An installer, code cleanup, a new demo and
+release preparation remain pending. No public release date is announced.
 
-A short demo has been recorded showing 6DoF weapons, pistols held in both hands and button-reloading the right pistol. A video link will be added separately.
+A short earlier demo was recorded; its link will be added separately.
+The expanded demonstration is still being prepared.
 
-Development: [andreystashev](https://github.com/andreystashev). Research foundation: [ReGlacier / ReHitman](https://github.com/ReGlacier/ReHitman).
+Development: [andreystashev](https://github.com/andreystashev).
+Research foundation: [ReGlacier / ReHitman](https://github.com/ReGlacier/ReHitman).
