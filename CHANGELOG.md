@@ -13,7 +13,9 @@
 - Add only missing new settings during updates; preserve explicit opt-outs.
 
 This does not install missing audio drivers or certify all SteamVR/Virtual
-Desktop configurations. The original reporter's setup still needs a retest.
+Desktop configurations. The original reporter later confirmed that manual
+OpenXR selection plus enabling the disabled Oculus Virtual Audio Device in
+Control Panel restored VR/audio. The new automatic 0.1.8.170 path still needs a retest.
 
 Validation: all 206 checks passed across the Full run and focused retries;
 39 isolated installer lifecycle checks passed. Local x86/x64 silent DirectSound

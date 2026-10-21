@@ -30,6 +30,12 @@ certify every headset/connection combination.
 
 ## Sound stays on the PC
 
+A Quest 3 tester using USB confirmed that opening Control Panel Sound settings
+and enabling **Oculus Virtual Audio Device** restored headset audio after manual
+OpenXR selection. The taskbar volume control had not exposed that disabled
+device. This confirms that workaround for that setup; the new 0.1.8.170 automatic
+recovery path still needs a separate retest.
+
 The mod tries to route the game's audio to an available headset endpoint. Check
 `audioState`, `audioApplied` and `audioVerified` in `logs/camera-status.json`, or
 the Audio messages in `logs/camera.log`. Applied is a Windows preference;
