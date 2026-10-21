@@ -1,58 +1,51 @@
 # Hitman: Blood Money VR
 
-Неофициальный VR-мод для оригинальной PC-версии **Hitman: Blood Money**:
-осмотр и наклоны в шлеме, наведение оружия руками, физические предметы
-и взаимодействия с миром через VR-контроллеры.
+An unofficial VR mod for the **original 2006 PC version of Hitman: Blood Money**. Play with head tracking, motion-controller aiming, tracked hands and physical item handling.
 
-**Отчёт о разработке — 18 октября 2026 года.**
+**Alpha 1 — 0.1.8.168.** Early access for players comfortable reporting bugs. Mission coverage and hardware compatibility are still incomplete.
 
-[English](README.en.md) · [Возможности и ограничения](STATUS.md) · [Ход разработки](DEVELOPMENT.md) · [История](CHANGELOG.md) · [Планы](ROADMAP.md)
+[Download Alpha 1](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.168-alpha.1) · [Installation](INSTALLATION.md) · [Controls](CONTROLS.md) · [Known issues](STATUS.md) · [Report a bug](https://github.com/andreystashev/hitman-blood-money-vr-showcase/issues/new/choose)
 
-## Что уже реализовано
+## Features
 
-- Первое лицо с отслеживанием положения и поворота головы, управление контроллерами и физическое приседание.
-- Наведение оружия обеими руками, независимые пистолеты, поддержка длинного оружия второй рукой.
-- Подбор, удержание, передача и броски предметов; урон от броска оружия и магазинов.
-- Физические удары холодным оружием и удар кулаком при наличии предмета.
-- Кастомные перезарядки, включая револьверы, ПП и большое оружие; гильзы пистолетов.
-- Использование оптики поднесением к глазу без отдельной кнопки включения.
-- Переноска тел, переодевание, прятание, ящики оружия и предметные кнопки.
-- Меню и инвентарь с контроллеров, подсказки, обводка и доступ к карте.
-- Работа с шокером и удавкой, броски и извлечение ножей из тел.
+- Positional head tracking, controller movement, turning and physical crouching.
+- Aim firearms with either hand, dual-wield pistols and support long guns with a second hand.
+- Grab, hold, transfer, drop and throw items using grip.
+- Use supported optics by bringing the weapon toward your eye.
+- Hand-adjacent action/item menus, inventory, map and briefing.
+- Adapted mission interactions, outfit changes, body handling and scripted cameras.
 
-Это работающие основы, которые продолжают дорабатываться. Состояние каждой
-подсистемы и ограничения — в [STATUS.md](STATUS.md).
+The default profile uses **button reloads and the standard inventory**. Physical reloads, body pouches and motion-driven damage are experimental and disabled by default. Individual grips and scripted actions can still behave incorrectly.
 
-## Последний срез
+## Requirements
 
-По игровому списку исправлены проблемы камер в диалогах, на лестницах,
-трубах, карнизах и окнах; показ старого интерфейса, переодевание, меню лифта,
-доступ в шахту и указанные ошибки пальм и растений. Доработаны сбор оружия
-и патронов, гильзы и сохранение прицела при кастомной перезарядке.
+| Component | Current support |
+| --- | --- |
+| OS | Windows x64, Windows 10 or later |
+| Game | An installed, legally owned copy of the original PC game; Steam is the primary test edition |
+| Tested setup | Meta Quest 3S, physical Touch controllers, Quest Link or Air Link |
+| Other headsets | OpenXR is experimental; compatibility requires individual testing |
 
-**Открытые регрессии:** заложник шагает на месте и не следует за рукой,
-при захвате может вырубаться от оружия; броски не вызывают ожидаемую тревогу.
-В лифтах остаются ошибки физики и привязки объектов, в опере видео не видно
-в шлеме. Есть проблемы чемодана с винтовкой и перезарядки воздушной винтовки.
+The Meta path does not require SteamVR. This mod is **not for Blood Money — Reprisal**. Setup checks the executable and installs separately without replacing game files. The game and VR runtime are not bundled. Python and a compiler are not needed to play.
 
-Следующие направления — удобные хваты, прицелы, инвентарь и скрываемый
-интерфейс, работа магазинов, звук и реакции ближнего боя, режимы видимости
-тела через INI. Отдельно исследуются размытие, гамма, блики и потеря половины
-частоты кадров. [Подробности разработки](DEVELOPMENT.md).
+## Get started
 
-## Совместимость и доступность
+1. Download **BloodMoneyVR-0.1.8.168-Setup.exe** from Releases, not GitHub's automatic source-code archives.
+2. Launch the normal game once, then close it. Connect your headset and wake both controllers.
+3. Run Setup, select `HitmanBloodMoney.exe`, and choose a separate writable mod folder.
+4. Use the **Blood Money VR** shortcut. Keep the game window focused and close the VR desktop/dashboard overlay.
+5. Load a mission, face forward and hold the right stick button for about 0.65 seconds to recenter.
 
-Основная тестовая конфигурация — **Windows, оригинальная PC-игра,
-Meta Quest 3S через Quest Link / Air Link**. Другие EXE, выпуски игры
-и гарнитуры ещё требуют проверки.
+See [Installation](INSTALLATION.md) and [Controls](CONTROLS.md). Use a separate test save and save before unfamiliar scripted interactions.
 
-Это публичный репозиторий описания проекта. **Исходники мода и готовые
-сборки здесь пока не размещены.** Предстоят установщик, подготовка кода,
-новая демонстрация и подготовка выпуска. Дата публичной сборки не объявлена.
+## Feedback
 
-Короткий ролик с 6DoF-оружием, двумя пистолетами и кнопочной перезарядкой
-ранее записан; ссылка будет добавлена отдельно. Новое видео ещё готовится:
-[план демонстрации](DEMO-CHECKLIST.md).
+Report the release version, mission, outfit, weapon/upgrades, headset/runtime and steps to reproduce. `Collect-Diagnostics.cmd` creates a local report you can review and attach. Nothing is uploaded automatically. Do not post raw dumps, saves or personal files publicly by default.
 
-Разработка: [andreystashev](https://github.com/andreystashev).
-Исследовательская база: [ReGlacier / ReHitman](https://github.com/ReGlacier/ReHitman).
+This repository hosts downloads, documentation and issue reports. Development source is maintained separately. See the [roadmap](ROADMAP.md) and [changelog](CHANGELOG.md).
+
+## Credits
+
+Created by [andreystashev](https://github.com/andreystashev). Reverse-engineering research builds on [ReGlacier / ReHitman](https://github.com/ReGlacier/ReHitman). Third-party components include MinHook, OpenVR, the OpenXR loader and Meta/Oculus SDK; their notices are included with the mod.
+
+Hitman and Blood Money belong to their respective owners. This is an independent community project, not an official IO Interactive product.
