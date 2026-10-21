@@ -20,7 +20,9 @@ Read [Controls](CONTROLS.md) before playing. Keep the supplied button-reload/inv
 
 ## Update and uninstall
 
-Close the game and VR helpers before updating the same mod folder. Existing settings are preserved, except that Setup disables the old debug weapon-grant setting. Items already in saves are not removed.
+Close the game and VR helpers, then run the newer Setup and select the same mod folder. Uninstalling first is not required. Setup replaces its supplied binaries and other matching package files; it does not wipe the entire folder. Existing INI settings, logs and unrecognized user files are retained, except that Setup disables the old debug weapon-grant setting. Items already in saves are not removed. Updating an in-use mod folder is refused rather than forcibly closing the game.
+
+If a folder contains manually mixed builds or third-party modifications, use a new empty mod folder for a clean comparison. Setup does not repair or reinstall Meta Horizon Link, and it does not replace game files.
 
 Rerun Setup to change the selected game. Uninstall through Windows Installed Apps. Settings, logs and unrecognized user files remain; game files stay in place.
 

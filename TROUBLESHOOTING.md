@@ -6,6 +6,26 @@ Confirm normal game launch and the selected executable. Use the mod shortcut; St
 
 If Setup rejects an EXE, report its edition and the displayed message. Do not replace it with an unverified file.
 
+## Flat-screen launch / Meta runtime error 126
+
+Update to **0.1.8.169** if a previous build cannot find the Meta runtime outside
+the default installation folder. The mod now checks OculusBase, both installation
+registry views and the OVRService path for x86 tracking and the x64 compositor.
+The runtime remains installed by Meta; no Meta runtime DLL is bundled with the mod.
+
+An absent `LibOVRRT32_1.dll` under the default Oculus folder does not establish
+that Meta is incorrectly installed: it may be located elsewhere. If it still
+fails after updating, the new camera log and hands status identify attempted
+locations and load errors. An existing DLL can also fail with error 126 when a
+dependency is missing. Review logs for personal installation paths before sharing.
+
+Successful game-module injection does not by itself mean that headset output
+has started. OpenXR is an experimental alternative selected with `Backend=OpenXR`
+under `[VR]` in `vr.ini`; simply opening SteamVR/Virtual Desktop does not switch
+a profile configured for the Meta backend. The active PC OpenXR runtime must
+also be configured for the connection you are using. Quest 3/Virtual Desktop
+compatibility is not newly certified by this hotfix.
+
 ## Hands and controls
 
 Release all buttons, wake both controllers, face forward and hold right stick click to recenter. Report persistent drift with the triggering action; arm posing is still under development.

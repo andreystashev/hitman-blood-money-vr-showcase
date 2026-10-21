@@ -2,9 +2,9 @@
 
 An unofficial VR mod for the **original 2006 PC version of Hitman: Blood Money**. Play with head tracking, motion-controller aiming, tracked hands and physical item handling.
 
-**Alpha 1 — 0.1.8.168.** Early access for players comfortable reporting bugs. Mission coverage and hardware compatibility are still incomplete.
+**Alpha 1 hotfix — 0.1.8.169.** Fixes Meta runtime discovery for non-default installation locations. Early access: mission coverage and hardware compatibility are still incomplete.
 
-[Download Alpha 1](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.168-alpha.1) · [Installation](INSTALLATION.md) · [Controls](CONTROLS.md) · [Known issues](STATUS.md) · [Report a bug](https://github.com/andreystashev/hitman-blood-money-vr-showcase/issues/new/choose)
+[Download Alpha 1 hotfix](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.169-alpha.1) · [Installation](INSTALLATION.md) · [Controls](CONTROLS.md) · [Known issues](STATUS.md) · [Report a bug](https://github.com/andreystashev/hitman-blood-money-vr-showcase/issues/new/choose)
 
 ## Features
 
@@ -30,7 +30,7 @@ The Meta path does not require SteamVR. This mod is **not for Blood Money — Re
 
 ## Get started
 
-1. Download **BloodMoneyVR-0.1.8.168-Setup.exe** from Releases, not GitHub's automatic source-code archives.
+1. Download **BloodMoneyVR-0.1.8.169-Setup.exe** from Releases, not GitHub's automatic source-code archives.
 2. Launch the normal game once, then close it. Connect your headset and wake both controllers.
 3. Run Setup, select `HitmanBloodMoney.exe`, and choose a separate writable mod folder.
 4. Use the **Blood Money VR** shortcut. Keep the game window focused and close the VR desktop/dashboard overlay.

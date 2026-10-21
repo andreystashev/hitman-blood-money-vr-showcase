@@ -1,5 +1,21 @@
 # Changelog
 
+## Alpha 1 hotfix — 0.1.8.169
+
+- Find the installed Meta runtime through OculusBase, both Windows installation
+  registry views and OVRService, with the default location as a fallback.
+- Share discovery between x86 head/controller tracking and the x64 Meta host.
+- Report attempted paths and distinguish an absent DLL from an existing DLL
+  that Windows cannot load, including dependency failures.
+- Include the latest continuous gameplay recorder fixes.
+
+Validated: 202 automated checks, real test-DLL loading from non-default Unicode
+paths in x86/x64, installed Meta DLL loading without opening a VR session, and
+28 isolated installer checks covering update, settings retention and uninstall.
+The original tester's Quest 3 launch has not yet been retested. Windows error
+126 can also indicate a missing dependency; this release does not guarantee
+that every error 126 is resolved. OpenXR remains experimental.
+
 ## Alpha 1 — 0.1.8.168
 
 First public installer release for the original PC game.
