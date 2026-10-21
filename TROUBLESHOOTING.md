@@ -8,7 +8,7 @@ If Setup rejects an EXE, report its edition and the displayed message. Do not re
 
 ## Flat-screen launch / Meta runtime error 126
 
-Update to **0.1.8.169** if a previous build cannot find the Meta runtime outside
+Update to **0.1.8.170** if a previous build cannot find the Meta runtime outside
 the default installation folder. The mod now checks OculusBase, both installation
 registry views and the OVRService path for x86 tracking and the x64 compositor.
 The runtime remains installed by Meta; no Meta runtime DLL is bundled with the mod.
@@ -20,11 +20,37 @@ locations and load errors. An existing DLL can also fail with error 126 when a
 dependency is missing. Review logs for personal installation paths before sharing.
 
 Successful game-module injection does not by itself mean that headset output
-has started. OpenXR is an experimental alternative selected with `Backend=OpenXR`
-under `[VR]` in `vr.ini`; simply opening SteamVR/Virtual Desktop does not switch
-a profile configured for the Meta backend. The active PC OpenXR runtime must
-also be configured for the connection you are using. Quest 3/Virtual Desktop
-compatibility is not newly certified by this hotfix.
+has started. Startup now reports headset readiness separately; a sleeping or
+unfocused headset can remain pending. Auto with `AllowBackendFallback=1` can
+recover from persistent Meta startup errors through OpenXR once per launch.
+The active PC OpenXR runtime must be installed and configured for the connection
+you use. Explicit `Backend=OpenXR` remains available. Simply opening SteamVR or
+Virtual Desktop does not configure that runtime for you. This update does not
+certify every headset/connection combination.
+
+## Sound stays on the PC
+
+The mod tries to route the game's audio to an available headset endpoint. Check
+`audioState`, `audioApplied` and `audioVerified` in `logs/camera-status.json`, or
+the Audio messages in `logs/camera.log`. Applied is a Windows preference;
+verified additionally means the observed active game audio sessions are on
+that endpoint. `restart_required` means an existing stream did not move: restart
+the game or select its output in Windows Volume mixer. `policy_unavailable`
+means automatic routing is unsupported by this Windows interface; use Volume
+mixer manually.
+
+For Quest Link over USB, run `mmsys.cpl`, open Playback, right-click empty space
+and show disabled/disconnected devices. Enable the headset output if present.
+Also check Meta Horizon Link's **Hear Computer Audio in VR** option. If the
+Oculus output is absent entirely, repair the Meta PC audio driver/installation;
+switching the VR backend cannot create it. For several active headset outputs,
+select the desired application output in Volume mixer, or specify an exact
+endpoint ID as `[Audio] Output` in `vr.ini` and restart.
+
+Use `[Audio] Output=Default` to restore the application's prior stored preference on
+the next launch. The mod does not change Windows' global playback default and
+does not install/enable drivers. Do not share the private `.audio-route.state`
+file; the diagnostics collector omits it and raw endpoint IDs.
 
 ## Hands and controls
 

@@ -15,6 +15,10 @@ Headset output and positional tracking; tracked arms; controller locomotion/crou
 - Dense missions can have frame-time drops. No guaranteed performance target is advertised.
 - Mirrors, clothing/body visibility, vegetation and post-processing may show artifacts.
 - OpenXR and non-Meta hardware need separate validation.
+- Automatic Meta-to-OpenXR recovery and per-game audio routing are included in
+  0.1.8.170. Routing is verified against active game audio sessions; unsupported
+  Windows interfaces, streams that require restart, and missing audio devices
+  still need manual action. The original reporter's system needs a separate retest.
 
 Physical reloads, body pouches and damage from swings/punches/thrown items are disabled by default. Use A reload and standard inventory for initial reports. Debug weapon grants are disabled.
 

@@ -2,9 +2,9 @@
 
 An unofficial VR mod for the **original 2006 PC version of Hitman: Blood Money**. Play with head tracking, motion-controller aiming, tracked hands and physical item handling.
 
-**Alpha 1 hotfix — 0.1.8.169.** Fixes Meta runtime discovery for non-default installation locations. Early access: mission coverage and hardware compatibility are still incomplete.
+**Alpha 1 update — 0.1.8.170.** Adds automatic Meta-to-OpenXR recovery, clearer headset startup status and game audio output selection. Early access: mission coverage and hardware compatibility are still incomplete.
 
-[Download Alpha 1 hotfix](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.169-alpha.1) · [Installation](INSTALLATION.md) · [Controls](CONTROLS.md) · [Known issues](STATUS.md) · [Report a bug](https://github.com/andreystashev/hitman-blood-money-vr-showcase/issues/new/choose)
+[Download Alpha 1 update](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.170-alpha.1) · [Installation](INSTALLATION.md) · [Controls](CONTROLS.md) · [Known issues](STATUS.md) · [Report a bug](https://github.com/andreystashev/hitman-blood-money-vr-showcase/issues/new/choose)
 
 ## Features
 
@@ -30,7 +30,7 @@ The Meta path does not require SteamVR. This mod is **not for Blood Money — Re
 
 ## Get started
 
-1. Download **BloodMoneyVR-0.1.8.169-Setup.exe** from Releases, not GitHub's automatic source-code archives.
+1. Download **BloodMoneyVR-0.1.8.170-Setup.exe** from Releases, not GitHub's automatic source-code archives.
 2. Launch the normal game once, then close it. Connect your headset and wake both controllers.
 3. Run Setup, select `HitmanBloodMoney.exe`, and choose a separate writable mod folder.
 4. Use the **Blood Money VR** shortcut. Keep the game window focused and close the VR desktop/dashboard overlay.
@@ -46,6 +46,6 @@ This repository hosts downloads, documentation and issue reports. Development so
 
 ## Credits
 
-Created by [andreystashev](https://github.com/andreystashev). Reverse-engineering research builds on [ReGlacier / ReHitman](https://github.com/ReGlacier/ReHitman). Third-party components include MinHook, OpenVR, the OpenXR loader and Meta/Oculus SDK; their notices are included with the mod.
+Created by [andreystashev](https://github.com/andreystashev). Reverse-engineering research builds on [ReGlacier / ReHitman](https://github.com/ReGlacier/ReHitman). Third-party components include MinHook, OpenVR, the OpenXR loader and Meta/Oculus SDK; audio policy interface references come from EarTrumpet. Their notices are included with the mod.
 
 Hitman and Blood Money belong to their respective owners. This is an independent community project, not an official IO Interactive product.
