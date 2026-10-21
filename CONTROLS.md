@@ -1,40 +1,118 @@
-# Controls
+# Controls and first steps
 
-These mappings describe the supplied Alpha 1 profile with Meta Touch controllers.
+These controls describe the default Alpha 1 profile with Meta Touch controllers. Physical reloads, body pouches and motion-driven damage are experimental and disabled by default.
+
+## Before playing
+
+1. **Disable V-Sync in the game.** The mod renders the left and right eyes on alternating game frames. At 60 game FPS, each eye receives only 30 new frames per second, so a higher game frame rate helps the headset view feel smoother.
+2. Connect your headset, wake both controllers, and launch using the **Blood Money VR** shortcut.
+3. Close the VR desktop/dashboard overlay and keep the game window focused.
+4. After loading a mission, face forward and **hold the right stick button for about 0.65 seconds** to recenter.
+
+## Movement and looking
 
 | Input | Action |
 | --- | --- |
-| Left stick | Walk/strafe relative to your viewing direction |
-| Left stick click | Toggle running; disabled while moving a body |
+| Left stick | Walk and strafe relative to your viewing direction |
+| Click left stick | Toggle running; disabled while moving a body |
 | Right stick left/right | Smooth turn |
-| Grip | Grab and keep holding an item |
-| Release grip | Drop; move the hand before release to throw |
-| Weapon-hand trigger | Fire; original button attack for melee tools |
-| Bring optic to eye | Enter supported scope view |
-| A, release | Reload the right-hand weapon; transfer a left-only gun to the right first |
-| B | Toggle crouching; physical crouching also works |
-| Hold X | Nearby actions at the hand; select with right stick up/down and release X to confirm |
-| Hold Y | Item/personal menu, including map/briefing, plus health/alarm/ammunition information |
-| Short right stick click | Inventory: select left/right, click again to close/use selection through the right hand |
-| Hold right stick click, about 0.65 seconds | Recenter while facing forward |
-| Left controller Menu | Pause/back |
+| B | Toggle crouching |
+| Physically crouch | Crouch in the game |
+| Hold right stick button for about 0.65 seconds | Recenter while facing forward |
 
-Each nested menu needs a fresh press and release. Choose CANCEL or move the left stick to cancel. Short X interactions do not need a large panel in front of your eyes.
+**Known limitation:** movement direction can behave incorrectly on ledges, while passing through windows, or when climbing pipes. This may vary depending on your headset/setup. Save before these sections where possible.
 
-Closing inventory on the current right-hand item stows it. Selecting an item already held in the left hand transfers it to the right. Large weapons may need dropping rather than stowing. Body pouches and grip-based inventory confirmation are disabled in this profile.
+## Picking up, holding and throwing items
 
-## Inventory: keep grip held
+**Grip is a hold button: keep it squeezed for as long as you want to hold an item.**
 
-Tap the right stick button to open inventory, select with right stick left/right, then tap again to equip. **Hold the right grip before closing inventory and keep it held afterward.** Without grip held at the moment you exit, the selected item falls to the ground. Releasing grip drops an item.
+- Move your hand near an item and squeeze **grip** to pick it up.
+- Keep that hand's **grip held** to retain it.
+- Release grip to drop it.
+- Move your hand and release grip to throw it.
+- To support a long gun with your other hand, bring that hand near the fore-end and hold its grip.
 
-## X/Y menus beside your hand
+## Inventory — read this if items keep falling
 
-**Hold X or Y to keep its menu open beside your hand.** While holding the button, select with right stick up/down; release X/Y to confirm. Release the button fully before opening the next menu. Choose CANCEL or move the left stick to cancel.
+1. **Tap and release the right stick button** to open inventory.
+2. Move the **right stick left/right** to highlight an item.
+3. **Squeeze and hold the right grip before closing inventory.**
+4. Tap the **right stick button again** to equip the item in your right hand.
+5. **Keep holding grip after inventory closes.**
 
-## Menus and settings
+**If you close inventory without holding the right grip, the selected item falls to the ground.** Grip must already be held at the moment you exit inventory.
 
-Ordinary menus: left stick to navigate, A to confirm, B to go back. X advances result screens; A/X skips movies when allowed by the game.
+Additional inventory behavior:
 
-Pause, then hold both stick buttons for about 0.65 seconds for VR settings. Keyboard fallbacks: F6 opens VR options while paused/in a menu; F7 recenters; F9 toggles headset output; F11 toggles tracked hands/VR controls.
+- Selecting the item currently held in your right hand and closing inventory **puts it away**.
+- Selecting an item already held in your left hand **transfers it to the right hand**.
+- Some large weapons cannot be stowed and must be dropped.
+- Use a **short stick click** for inventory. Holding the stick button recenters your view.
+- Grip keeps the equipped item in your hand; grip-based inventory confirmation and body pouches are disabled in this profile.
 
-Physical reloads and motion-driven damage are experimental, not the defaults described here.
+## X/Y menus — hold, select, release
+
+These menus appear **beside your hand**, rather than as a large panel in front of your face.
+
+| Input | Menu |
+| --- | --- |
+| Hold X | Nearby actions, such as changing clothes or other contextual interactions |
+| Hold Y | Item/personal menu, including map, briefing and health/alarm/ammunition information |
+
+To use either menu:
+
+1. **Press and keep holding X or Y** to open the menu.
+2. While still holding the button, move the **right stick up/down** to highlight an option.
+3. **Release X or Y to confirm** the highlighted option.
+4. For another menu or a nested selection, fully release the button, then press and hold it again.
+
+Choose **CANCEL** or move the left stick to cancel.
+
+**Do not release X/Y while browsing:** releasing the button confirms the current selection.
+
+## Weapons and reloading
+
+| Input | Action |
+| --- | --- |
+| Trigger on the hand holding a weapon | Fire; original button attack for melee tools |
+| A, on release | Reload the right-hand weapon |
+| Bring a supported optic to your eye | Enter scope/binocular view |
+
+- Keep **grip held while aiming and firing**, or you will drop the weapon.
+- If your only firearm is in your left hand, **transfer it to the right hand before reloading**.
+- The default profile uses **button reloads**. Physical magazine handling is experimental and disabled by default.
+
+## Pause, ordinary menus and settings
+
+| Input | Action |
+| --- | --- |
+| Left controller Menu button | Pause/back |
+| Left stick in ordinary menus | Navigate |
+| A in ordinary menus | Confirm |
+| B in ordinary menus | Back |
+| X on result screens | Continue |
+| A/X during movies | Skip when the game allows it |
+
+To open **VR settings**, pause the game, then hold **both stick buttons for about 0.65 seconds**.
+
+### Keyboard shortcuts
+
+| Key | Action |
+| --- | --- |
+| F6 | Open VR options while paused/in a menu |
+| F7 | Recenter |
+| F9 | Toggle headset output |
+| F11 | Toggle tracked hands and VR controls |
+
+## If something behaves unexpectedly
+
+| Problem | What to try |
+| --- | --- |
+| Item falls after inventory | Hold the right grip **before closing inventory** and keep it held afterward. |
+| X/Y menu closes too soon | Keep the button held while browsing; release only to confirm. |
+| View or hands feel offset | Face forward and hold the right stick button for about 0.65 seconds to recenter. |
+| Headset view feels choppy | Check that V-Sync is disabled and the game window stays focused. |
+| Movement direction feels wrong during climbing or traversal | This is a known limitation; report the location and headset/setup. |
+| Item falls even with grip held | Report the item and exact steps — this may be a bug. |
+
+See [Installation](INSTALLATION.md) for setup and [Troubleshooting](TROUBLESHOOTING.md) for logs and diagnostics.
