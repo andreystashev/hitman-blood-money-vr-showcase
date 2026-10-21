@@ -14,6 +14,14 @@ Use the original PC game, not Reprisal. Launch it normally once. Steam is the pr
 
 Read [Controls](CONTROLS.md) before playing. Keep the supplied button-reload/inventory defaults for initial reports.
 
+## Before playing
+
+**Disable in-game V-Sync.** The mod renders the eyes on alternating game frames: at 60 game FPS, each eye receives only 30 new frames per second. Higher game frame rates help make the headset view smoother.
+
+Hold the right grip before closing inventory and keep it held to retain the selected item. Hold X/Y to select actions in the menus beside your hand, then release to confirm. See [Controls](CONTROLS.md).
+
+Movement direction can behave incorrectly on ledges, while passing through windows or climbing pipes; behavior may vary by headset/setup. These sections still need work.
+
 ## Other runtimes
 
 `vr.ini`, section `[VR]`, accepts `Backend=Auto`, `Meta` or `OpenXR`. The new default is Auto. With `AllowBackendFallback=1`, persistent Meta startup errors can trigger one attempt with the active PC OpenXR runtime after the old session stops. The mod changes rendering and controller tracking together; it does not change Windows' active runtime. Set `AllowBackendFallback=0` to keep your selected backend. OpenXR and controller compatibility still need individual testing.

@@ -23,6 +23,14 @@ Each nested menu needs a fresh press and release. Choose CANCEL or move the left
 
 Closing inventory on the current right-hand item stows it. Selecting an item already held in the left hand transfers it to the right. Large weapons may need dropping rather than stowing. Body pouches and grip-based inventory confirmation are disabled in this profile.
 
+## Inventory: keep grip held
+
+Tap the right stick button to open inventory, select with right stick left/right, then tap again to equip. **Hold the right grip before closing inventory and keep it held afterward.** Without grip held at the moment you exit, the selected item falls to the ground. Releasing grip drops an item.
+
+## X/Y menus beside your hand
+
+**Hold X or Y to keep its menu open beside your hand.** While holding the button, select with right stick up/down; release X/Y to confirm. Release the button fully before opening the next menu. Choose CANCEL or move the left stick to cancel.
+
 ## Menus and settings
 
 Ordinary menus: left stick to navigate, A to confirm, B to go back. X advances result screens; A/X skips movies when allowed by the game.

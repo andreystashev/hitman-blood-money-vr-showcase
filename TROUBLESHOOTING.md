@@ -64,6 +64,18 @@ Release all buttons, wake both controllers, face forward and hold right stick cl
 
 With default settings, A reloads the right-hand weapon on release. Transfer a left-only gun to the right first. Use a short right-stick click for inventory. Physical reloads and pouches are disabled by default.
 
+### Items fall when closing inventory
+
+Hold the right grip **before closing inventory** and keep it held afterward. Closing without grip held drops the selected item. If it still drops while grip stays held, report the item and exact steps.
+
+X/Y menus appear beside your hand: hold the button while selecting with right stick up/down, then release to confirm.
+
+### Choppy headset view or unexpected movement direction
+
+**Disable in-game V-Sync.** The mod renders the eyes on alternating game frames: at 60 game FPS, each eye receives only 30 new frames per second. Higher game frame rates help make the headset view smoother.
+
+Movement direction can behave incorrectly on ledges, while passing through windows or climbing pipes; behavior may vary by headset/setup. These sections still need work.
+
 ## Crash or broken interaction
 
 Record the mission, outfit, held items, selected menu label and last action. Include whether the problem occurs outside VR. Use separate saves when testing.

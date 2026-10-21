@@ -38,6 +38,13 @@ The Meta path does not require SteamVR. This mod is **not for Blood Money — Re
 
 See [Installation](INSTALLATION.md) and [Controls](CONTROLS.md). Use a separate test save and save before unfamiliar scripted interactions.
 
+## Before playing
+
+- **Disable in-game V-Sync.** The mod renders the eyes on alternating game frames: at 60 game FPS, each eye receives only 30 new frames per second. Higher game frame rates help make the headset view smoother.
+- **Keep grip held when closing inventory** to keep the selected item in your hand; releasing grip drops it.
+- **Hold X/Y** for menus beside your hand, select with right stick up/down, then release X/Y to confirm.
+- Movement direction can behave incorrectly on ledges, while passing through windows or climbing pipes; behavior may vary by headset/setup. These sections still need work.
+
 ## Feedback
 
 Report the release version, mission, outfit, weapon/upgrades, headset/runtime and steps to reproduce. `Collect-Diagnostics.cmd` creates a local report you can review and attach. Nothing is uploaded automatically. Do not post raw dumps, saves or personal files publicly by default.
