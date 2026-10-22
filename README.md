@@ -2,9 +2,9 @@
 
 An unofficial VR mod for the **original 2006 PC version of Hitman: Blood Money**. Play with head tracking, motion-controller aiming, tracked hands and physical item handling.
 
-**Alpha 1 update — 0.1.8.170.** Adds automatic Meta-to-OpenXR recovery, clearer headset startup status and game audio output selection. Early access: mission coverage and hardware compatibility are still incomplete.
+**Alpha 2 - 0.1.8.171.** New two-hand grip inventory, contextual controller help, seated calibration and more reliable traversal cameras. Includes scope/reload recovery and inventory crash fixes. This is still an experimental alpha; mission and hardware coverage remains incomplete.
 
-[Download Alpha 1 update](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.170-alpha.1) · [Installation](INSTALLATION.md) · [Controls](CONTROLS.md) · [Known issues](STATUS.md) · [Report a bug](https://github.com/andreystashev/hitman-blood-money-vr-showcase/issues/new/choose)
+[Download Alpha 2](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.171-alpha.2) · [Installation](INSTALLATION.md) · [Controls](CONTROLS.md) · [Known issues](STATUS.md) · [Report a bug](https://github.com/andreystashev/hitman-blood-money-vr-showcase/issues/new/choose)
 
 ## Features
 
@@ -15,7 +15,7 @@ An unofficial VR mod for the **original 2006 PC version of Hitman: Blood Money**
 - Hand-adjacent action/item menus, inventory, map and briefing.
 - Adapted mission interactions, outfit changes, body handling and scripted cameras.
 
-The default profile uses **button reloads and the standard inventory**. Physical reloads, body pouches and motion-driven damage are experimental and disabled by default. Individual grips and scripted actions can still behave incorrectly.
+The default profile uses **button reloads and independent grip selection for each hand in inventory**. Physical reloads, body pouches and motion-driven damage are experimental and disabled by default. Individual grips and scripted actions can still behave incorrectly.
 
 ## Requirements
 
@@ -30,7 +30,7 @@ The Meta path does not require SteamVR. This mod is **not for Blood Money — Re
 
 ## Get started
 
-1. Download **BloodMoneyVR-0.1.8.170-Setup.exe** from Releases, not GitHub's automatic source-code archives.
+1. Download **BloodMoneyVR-0.1.8.171-Setup.exe** from Releases, not GitHub's automatic source-code archives.
 2. Launch the normal game once, then close it. Connect your headset and wake both controllers.
 3. Run Setup, select `HitmanBloodMoney.exe`, and choose a separate writable mod folder.
 4. Use the **Blood Money VR** shortcut. Keep the game window focused and close the VR desktop/dashboard overlay.

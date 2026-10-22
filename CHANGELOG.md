@@ -1,5 +1,19 @@
 # Changelog
 
+## Alpha 2 - 0.1.8.171
+
+- Two-hand inventory selection: select an item with either grip, keep holding it while browsing, then choose a different item for the other hand. Left/right indicators show the pending choices. Closing without making a choice preserves the held equipment.
+- Clearer inventory captions and contextual equipment help. Turn the right palm toward your face for the Y reminder; hold Y to see the controls for both hands and health/alarm/ammunition information. Nearby interactions have hand-adjacent previews.
+- Optional native draw/holster animations run one hand at a time. Transferring an already-held item skips the animation. Fixed inventory action locks after equipping and a crash when stowing/changing a weapon after shooting.
+- Scoped weapons remain usable as optics when empty. Reloading restores the normal VR view and moving the weapon away prevents stale zoom from returning.
+- Seated calibration shares the native eye anchor with the hands. Button crouching works without physically standing up. Standing play remains the default.
+- More consistent pipe/ledge transitions, short first-person climbing clips and movement rearming after traversal. Continuous observer views choose clear side/raised viewpoints and keep rendering when a preferred viewpoint is blocked.
+- First-person wall-hug ledges face outward, follow the character's current turn and map horizontal movement to the displayed view. Updated elevator-hatch discovery includes high/owner-only hatch actions.
+- Manual-only empty-magazine reload option. The supplied new-install profile uses button reloads with automatic empty reload disabled.
+- Duplicate weapon storage merges compatible ammunition without prematurely destroying weapon objects still referenced by NPC damage logic. Silverballer instances and distinct variants retain their special handling.
+
+Validation: 206 Full checks passed. The installer payload fixtures and installed-launcher check passed. The reported traversal and inventory fixes were tested locally in a headset; all-mission/hardware coverage remains incomplete.
+
 ## Alpha 1 update — 0.1.8.170
 
 - Attempt recovery once from persistent Meta initialization errors through the active

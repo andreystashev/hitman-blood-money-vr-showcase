@@ -41,3 +41,7 @@ Rerun Setup to change the selected game. Uninstall through Windows Installed App
 ## Verify the download
 
 A SHA256 file is provided beside Setup. Compare it with PowerShell's `Get-FileHash -Algorithm SHA256`. The alpha is unsigned; use files from this repository's release page.
+
+## Alpha 2 controls after upgrading
+
+Setup preserves existing INI values. New installations use independent grip selection for both hands. To enable it in an older mod folder, set `LegacyInventory=0` in mod.ini `[Features]` and `InventoryGripConfirm=1` in hands.ini `[Input]`, then restart. Set `InventoryEquipAnimations=1` and `AutoReload=0` in mod.ini `[Features]` for the supplied draw/holster and manual-only reload behavior. See [Controls](CONTROLS.md) before using the new workflow. No need to uninstall or erase your other settings.

@@ -1,6 +1,6 @@
 # Controls and first steps
 
-These controls describe the default Alpha 1 profile with Meta Touch controllers. Physical reloads, body pouches and motion-driven damage are experimental and disabled by default.
+These controls describe the default Alpha 2 profile (0.1.8.171) with Meta Touch controllers. Physical reloads, body pouches and motion-driven damage are experimental and disabled by default.
 
 ## Before playing
 
@@ -20,7 +20,7 @@ These controls describe the default Alpha 1 profile with Meta Touch controllers.
 | Physically crouch | Crouch in the game |
 | Hold right stick button for about 0.65 seconds | Recenter while facing forward |
 
-**Known limitation:** movement direction can behave incorrectly on ledges, while passing through windows, or when climbing pipes. This may vary depending on your headset/setup. Save before these sections where possible.
+**Traversal:** the first-person wall-hug camera faces outward, and horizontal input follows the displayed left/right direction. Observer cameras choose clear viewpoints where possible. Mission-specific climbing/window transitions still need wider testing; save before these sections.
 
 ## Picking up, holding and throwing items
 
@@ -32,23 +32,16 @@ These controls describe the default Alpha 1 profile with Meta Touch controllers.
 - Move your hand and release grip to throw it.
 - To support a long gun with your other hand, bring that hand near the fore-end and hold its grip.
 
-## Inventory — read this if items keep falling
+## Choose equipment independently for both hands
 
-1. **Tap and release the right stick button** to open inventory.
-2. Move the **right stick left/right** to highlight an item.
-3. **Squeeze and hold the right grip before closing inventory.**
-4. Tap the **right stick button again** to equip the item in your right hand.
-5. **Keep holding grip after inventory closes.**
+1. Short-click the right stick to open inventory. Browse with right stick left/right.
+2. Squeeze and **hold** the grip of the hand that should receive the highlighted item.
+3. Keep that grip held while browsing. Select another item with the other grip if desired. Left/right markers show the pending hand choices.
+4. Short-click the right stick again to close; keep the chosen grips held.
 
-**If you close inventory without holding the right grip, the selected item falls to the ground.** Grip must already be held at the moment you exit inventory.
+To stow an item, open inventory while holding it, release that hand's grip **inside inventory**, then close. Releasing grip outside inventory drops it instead. Non-concealable weapons are dropped rather than stowed. Opening and closing without changing a hand preserves its item.
 
-Additional inventory behavior:
-
-- Selecting the item currently held in your right hand and closing inventory **puts it away**.
-- Selecting an item already held in your left hand **transfers it to the right hand**.
-- Some large weapons cannot be stowed and must be dropped.
-- Use a **short stick click** for inventory. Holding the stick button recenters your view.
-- Grip keeps the equipped item in your hand; grip-based inventory confirmation and body pouches are disabled in this profile.
+A single item instance cannot be held twice. Choosing an already-held item transfers it between hands. Optional native draw/holster animations run sequentially, one hand at a time; normal tracked control resumes after they finish.
 
 ## X/Y menus — hold, select, release
 
@@ -56,7 +49,7 @@ These menus appear **beside your hand**, rather than as a large panel in front o
 
 | Input | Menu |
 | --- | --- |
-| Hold X | Nearby actions, such as changing clothes or other contextual interactions |
+| Hold X | Nearby contextual actions, such as doors and lifts |
 | Hold Y | Item/personal menu, including map, briefing and health/alarm/ammunition information |
 
 To use either menu:
@@ -116,3 +109,25 @@ To open **VR settings**, pause the game, then hold **both stick buttons for abou
 | Item falls even with grip held | Report the item and exact steps — this may be a bug. |
 
 See [Installation](INSTALLATION.md) for setup and [Troubleshooting](TROUBLESHOOTING.md) for logs and diagnostics.
+
+## Alpha 2 settings and seated play
+
+Existing INI choices survive an upgrade. Set both inventory options below if an old installation still uses Alpha 1 selection.
+
+Restart after changing the following INI options:
+
+| File / section | Setting | Meaning |
+| --- | --- | --- |
+| mod.ini / Features | LegacyInventory=0 | New independent two-hand selection; 1 restores the old right-hand workflow |
+| hands.ini / Input | InventoryGripConfirm=1 | Enable grip selection in inventory |
+| mod.ini / Features | InventoryEquipAnimations=1 | Play native draw/holster animations; 0 skips them |
+| mod.ini / Features | AutoReload=0 | Require button reload when empty; 1 permits automatic reload |
+| mod.ini / Camera | SeatedMode=1 | Calibrate seated eye height; default is 0 for standing |
+| mod.ini / Camera | LedgeFirstPerson=1 | First-person ledge view; 0 uses an observer view |
+| mod.ini / UI | WristControlHints=1 | Enable contextual hand help |
+
+For seated play, sit comfortably and recenter with F7 or the held right-stick click. Button crouching then uses the character's crouch height without requiring you to stand. Recenter again after switching between sitting and standing.
+
+Physical reloads, body pouches and motion-driven damage remain experimental and disabled by default. Weapon-specific support grips can still be imperfect.
+
+Turn the right palm toward your face for the Y reminder. Hold Y to see contextual controls for both hands. During supported third-person actions, a short inventory-stick click cycles camera presets.
