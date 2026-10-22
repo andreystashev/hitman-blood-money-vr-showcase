@@ -43,7 +43,7 @@ To stow an item, open inventory while holding it, release that hand's grip **ins
 
 A single item instance cannot be held twice. Choosing an already-held item transfers it between hands. Optional native draw/holster animations run sequentially, one hand at a time; normal tracked control resumes after they finish.
 
-## X/Y menus — hold, select, release
+## X/Y menus вЂ” hold, select, release
 
 These menus appear **beside your hand**, rather than as a large panel in front of your face.
 
@@ -101,12 +101,12 @@ To open **VR settings**, pause the game, then hold **both stick buttons for abou
 
 | Problem | What to try |
 | --- | --- |
-| Item falls after inventory | Hold the right grip **before closing inventory** and keep it held afterward. |
+| Item falls after inventory | Squeeze and hold the grip of the desired hand on its highlighted item, then keep it held while closing inventory. |
 | X/Y menu closes too soon | Keep the button held while browsing; release only to confirm. |
 | View or hands feel offset | Face forward and hold the right stick button for about 0.65 seconds to recenter. |
 | Headset view feels choppy | Check that V-Sync is disabled and the game window stays focused. |
-| Movement direction feels wrong during climbing or traversal | This is a known limitation; report the location and headset/setup. |
-| Item falls even with grip held | Report the item and exact steps — this may be a bug. |
+| Movement direction feels wrong during climbing or traversal | Recenter before entry; if it persists on Alpha 2, report the exact location and headset/setup. |
+| Item falls even with grip held | Report the item and exact steps вЂ” this may be a bug. |
 
 See [Installation](INSTALLATION.md) for setup and [Troubleshooting](TROUBLESHOOTING.md) for logs and diagnostics.
 

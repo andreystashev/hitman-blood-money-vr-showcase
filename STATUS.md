@@ -9,7 +9,7 @@ Headset output and positional tracking; tracked arms; controller locomotion/crou
 ## Incomplete or experimental
 
 - Weapon-specific fore-end grips and arm alignment can be imperfect.
-- Movement direction can behave incorrectly on ledges, while passing through windows or climbing pipes; behavior may vary by headset/setup. These sections still need work.
+- Ledge, window and pipe handling has changed in Alpha 2 and passed local checks. Mission-specific entry/exit transitions and other headset setups still need wider testing.
 - Scripted mission actions, outfit changes, traversal, hostages and body interactions need wider testing.
 - Scope entry/exit, recoil and weapon upgrades can reveal camera/firing issues.
 - Elevators can affect physics and UI placement.
