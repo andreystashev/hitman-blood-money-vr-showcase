@@ -1,5 +1,18 @@
 # Changelog
 
+## Alpha 3 — 0.1.8.172
+
+- Add a connection/settings launcher with game-executable compatibility and headset/runtime checks. Quest Link/Air Link, Virtual Desktop/VDXR, SteamVR and system/custom OpenXR can be selected without changing the global Windows runtime setting.
+- Add desktop and Start menu settings shortcuts plus `Settings-BloodMoney-VR.cmd` in the installed folder. **Modifiers** has **Verified** and **Experimental** lists with descriptions and Save / Save & play controls.
+- Replace all seven mod INIs with the supplied defaults on every installation, update and same-version reinstall. Only the launcher's game path, connection and language are retained. Old disabled options cannot silently survive an update.
+- Enable all visible modifiers except Physical crouching, including Experimental combat. Automatic reload is enabled; physical magazine reloads, body pouches and debug weapon grants remain disabled. Seated play uses ordinary recentering; B crouches unless physical crouching is enabled.
+- Make reload startup messages reflect the active mode. Error dialogs contain only the current launch's output, without older success messages.
+- Revise physical combat: punches, gun-butt strikes and non-blade object hits use nonlethal head/body handling; blade swings retain lethal damage. Coins keep native distraction behavior and bypass the mod's extra hit logic.
+- Apply painkillers/adrenaline by selecting with a held grip and closing inventory. A right-held fiber wire accepts its trigger without a second grip. Ordinary unlocked doors offer Open Door while crouching alongside the keyhole action.
+- Revise victim/witness attack recognition. The latest delayed civilian recognition/report-to-guard case still needs dedicated manual mission testing.
+
+Validation: 208 automated Full checks and 69 isolated installer checks passed, including stale/corrupt/missing/UTF-16 INIs, same-version reinstalls and changed-folder updates. The developer checked the prepared release before publication; wider mission and hardware coverage remains incomplete. See the [release notes and modifier guide](RELEASE-NOTES-0.1.8.172.md).
+
 ## Alpha 2 - 0.1.8.171
 
 - Two-hand inventory selection: select an item with either grip, keep holding it while browsing, then choose a different item for the other hand. Left/right indicators show the pending choices. Closing without making a choice preserves the held equipment.

@@ -1,6 +1,6 @@
 # Controls and first steps
 
-These controls describe the default Alpha 2 profile (0.1.8.171) with Meta Touch controllers. Physical reloads, body pouches and motion-driven damage are experimental and disabled by default.
+These controls describe the default Alpha 3 profile (0.1.8.172) with Meta Touch controllers. All 14 visible modifiers are enabled except Physical crouching, including the Experimental combat modifiers. Physical magazine reloads and body pouches remain disabled.
 
 ## Before playing
 
@@ -17,7 +17,7 @@ These controls describe the default Alpha 2 profile (0.1.8.171) with Meta Touch 
 | Click left stick | Toggle running; disabled while moving a body |
 | Right stick left/right | Smooth turn |
 | B | Toggle crouching |
-| Physically crouch | Crouch in the game |
+| Physically crouch | Crouch only when the Physical crouching modifier is enabled; off by default |
 | Hold right stick button for about 0.65 seconds | Recenter while facing forward |
 
 **Traversal:** the first-person wall-hug camera faces outward, and horizontal input follows the displayed left/right direction. Observer cameras choose clear viewpoints where possible. Mission-specific climbing/window transitions still need wider testing; save before these sections.
@@ -42,6 +42,8 @@ These controls describe the default Alpha 2 profile (0.1.8.171) with Meta Touch 
 To stow an item, open inventory while holding it, release that hand's grip **inside inventory**, then close. Releasing grip outside inventory drops it instead. Non-concealable weapons are dropped rather than stowed. Opening and closing without changing a hand preserves its item.
 
 A single item instance cannot be held twice. Choosing an already-held item transfers it between hands. Optional native draw/holster animations run sequentially, one hand at a time; normal tracked control resumes after they finish.
+
+**Painkillers and adrenaline:** highlight the item, hold the chosen hand's grip and close inventory. The game applies a dose directly; it does not become a held item, and your weapon is retained. Release grip before closing to cancel the selection.
 
 ## X/Y menus вЂ” hold, select, release
 
@@ -73,7 +75,19 @@ Choose **CANCEL** or move the left stick to cancel.
 
 - Keep **grip held while aiming and firing**, or you will drop the weapon.
 - If your only firearm is in your left hand, **transfer it to the right hand before reloading**.
-- The default profile uses **button reloads**. Physical magazine handling is experimental and disabled by default.
+- **Automatic reload is on by default:** an empty magazine reloads when reserve ammunition is available. Disable **Automatic reload** in Settings → Modifiers to wait for A instead. Ordinary A reload remains available; physical magazine handling is disabled.
+
+## Physical combat — Experimental modifiers
+
+- **Punch knockouts:** hold grip with an empty hand for intentional physical strikes. Head hits can knock out; body hits react, deal small nonlethal damage and accumulate a knockout.
+- **Gun butt strikes:** physical firearm strikes use the same nonlethal head/body principle.
+- **Physical melee weapons:** blade swings retain lethal damage. Native trigger attacks remain available through their separate modifier.
+- **Thrown object hits:** non-blade guns, mines, magazines and props use nonlethal head/body handling. Native blade throws retain their normal behavior.
+- **Coins** keep the game's distraction behavior and are excluded from the mod's added hit/damage/knockout logic.
+
+These mechanics need wider mission testing; disable their checkboxes in **Experimental** if unwanted. The latest delayed recognition of an attacker by a civilian still needs a dedicated manual report-to-guard test. Do not assume every witness/report path is correct.
+
+A fiber wire held in the right hand accepts that hand's trigger without a second grip. While crouching at an ordinary unlocked door, the action menu offers **Open Door** as well as the keyhole action.
 
 ## Pause, ordinary menus and settings
 
@@ -105,29 +119,21 @@ To open **VR settings**, pause the game, then hold **both stick buttons for abou
 | X/Y menu closes too soon | Keep the button held while browsing; release only to confirm. |
 | View or hands feel offset | Face forward and hold the right stick button for about 0.65 seconds to recenter. |
 | Headset view feels choppy | Check that V-Sync is disabled and the game window stays focused. |
-| Movement direction feels wrong during climbing or traversal | Recenter before entry; if it persists on Alpha 2, report the exact location and headset/setup. |
+| Movement direction feels wrong during climbing or traversal | Recenter before entry; if it persists on Alpha 3, report the exact location and headset/setup. |
 | Item falls even with grip held | Report the item and exact steps вЂ” this may be a bug. |
 
 See [Installation](INSTALLATION.md) for setup and [Troubleshooting](TROUBLESHOOTING.md) for logs and diagnostics.
 
-## Alpha 2 settings and seated play
+## Change modifiers and play seated
 
-Existing INI choices survive an upgrade. Set both inventory options below if an old installation still uses Alpha 1 selection.
+1. Open **Blood Money VR Settings** on the desktop or in Start, or run `Settings-BloodMoney-VR.cmd` in the installed mod folder.
+2. Open **Modifiers**, then choose **Verified** or **Experimental**. Read the description beside each checkbox and change the options you want.
+3. **Save & play** saves both pages and launches. **Save** saves only the current page. Restart an already-running game to apply changes.
 
-Restart after changing the following INI options:
+For example, turn **Automatic reload** off for button-only reloads; turn **Physical crouching** on to crouch by lowering the headset. Physical magazine reloads are a separate unfinished feature and remain off.
 
-| File / section | Setting | Meaning |
-| --- | --- | --- |
-| mod.ini / Features | LegacyInventory=0 | New independent two-hand selection; 1 restores the old right-hand workflow |
-| hands.ini / Input | InventoryGripConfirm=1 | Enable grip selection in inventory |
-| mod.ini / Features | InventoryEquipAnimations=1 | Play native draw/holster animations; 0 skips them |
-| mod.ini / Features | AutoReload=0 | Require button reload when empty; 1 permits automatic reload |
-| mod.ini / Camera | SeatedMode=1 | Calibrate seated eye height; default is 0 for standing |
-| mod.ini / Camera | LedgeFirstPerson=1 | First-person ledge view; 0 uses an observer view |
-| mod.ini / UI | WristControlHints=1 | Enable contextual hand help |
+For seated play, sit comfortably and recenter with F7 or the held right-stick click. With Physical crouching off, B controls crouching while your head remains tracked. No separate seated-mode INI edit is needed. Recenter again after switching between sitting and standing.
 
-For seated play, sit comfortably and recenter with F7 or the held right-stick click. Button crouching then uses the character's crouch height without requiring you to stand. Recenter again after switching between sitting and standing.
-
-Physical reloads, body pouches and motion-driven damage remain experimental and disabled by default. Weapon-specific support grips can still be imperfect.
+**Installing, updating or reinstalling resets all seven mod INIs to the release defaults**, including these modifier choices and calibration. Only the launcher's game path, connection and language are retained. See [Installation](INSTALLATION.md) before updating. Weapon-specific support grips can still be imperfect.
 
 Turn the right palm toward your face for the Y reminder. Hold Y to see contextual controls for both hands. During supported third-person actions, a short inventory-stick click cycles camera presets.

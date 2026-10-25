@@ -2,20 +2,20 @@
 
 An unofficial VR mod for the **original 2006 PC version of Hitman: Blood Money**. Play with head tracking, motion-controller aiming, tracked hands and physical item handling.
 
-**Alpha 2 - 0.1.8.171.** New two-hand grip inventory, contextual controller help, seated calibration and more reliable traversal cameras. Includes scope/reload recovery and inventory crash fixes. This is still an experimental alpha; mission and hardware coverage remains incomplete.
+**Alpha 3 — 0.1.8.172.** A connection/settings launcher, Verified and Experimental modifiers, recent combat/inventory fixes and fresh configuration files on every installation. This is still an experimental alpha; mission and hardware coverage remains incomplete. [Release notes and modifier guide](RELEASE-NOTES-0.1.8.172.md).
 
-[Download Alpha 2](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.171-alpha.2) · [Installation](INSTALLATION.md) · [Controls](CONTROLS.md) · [Known issues](STATUS.md) · [Report a bug](https://github.com/andreystashev/hitman-blood-money-vr-showcase/issues/new/choose)
+[Download Alpha 3](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.172-alpha.3) · [Installation](INSTALLATION.md) · [Controls](CONTROLS.md) · [Known issues](STATUS.md) · [Report a bug](https://github.com/andreystashev/hitman-blood-money-vr-showcase/issues/new/choose)
 
 ## Features
 
-- Positional head tracking, controller movement, turning and physical crouching.
+- Positional head tracking, controller movement, turning and optional physical crouching.
 - Aim firearms with either hand, dual-wield pistols and support long guns with a second hand.
 - Grab, hold, transfer, drop and throw items using grip.
 - Use supported optics by bringing the weapon toward your eye.
 - Hand-adjacent action/item menus, inventory, map and briefing.
 - Adapted mission interactions, outfit changes, body handling and scripted cameras.
 
-The default profile uses **button reloads and independent grip selection for each hand in inventory**. Physical reloads, body pouches and motion-driven damage are experimental and disabled by default. Individual grips and scripted actions can still behave incorrectly.
+The default profile uses **ordinary button reloads with automatic empty-magazine reload enabled**, plus independent grip selection for each hand in inventory. All 14 visible modifiers are enabled except **Physical crouching**. The Experimental combat modifiers are enabled too; disable them in Settings if unwanted. Physical magazine reloads and body pouches remain disabled. Individual grips and scripted actions can still behave incorrectly.
 
 ## Requirements
 
@@ -24,19 +24,26 @@ The default profile uses **button reloads and independent grip selection for eac
 | OS | Windows x64, Windows 10 or later |
 | Game | An installed, legally owned copy of the original PC game; Steam is the primary test edition |
 | Tested setup | Meta Quest 3S, physical Touch controllers, Quest Link or Air Link |
+| Virtual Desktop | VDXR head and hand tracking checked locally |
 | Other headsets | OpenXR is experimental; compatibility requires individual testing |
 
 The Meta path does not require SteamVR. This mod is **not for Blood Money — Reprisal**. Setup checks the executable and installs separately without replacing game files. The game and VR runtime are not bundled. Python and a compiler are not needed to play.
 
 ## Get started
 
-1. Download **BloodMoneyVR-0.1.8.171-Setup.exe** from Releases, not GitHub's automatic source-code archives.
+1. Download **BloodMoneyVR-0.1.8.172-Setup.exe** from Releases, not GitHub's automatic source-code archives.
 2. Launch the normal game once, then close it. Connect your headset and wake both controllers.
 3. Run Setup, select `HitmanBloodMoney.exe`, and choose a separate writable mod folder.
-4. Use the **Blood Money VR** shortcut. Keep the game window focused and close the VR desktop/dashboard overlay.
+4. Open **Blood Money VR Settings**, select your connection and game, then click **Save & play**. For later launches, use **Blood Money VR**. Keep the game window focused and close the VR desktop/dashboard overlay.
 5. Load a mission, face forward and hold the right stick button for about 0.65 seconds to recenter.
 
 See [Installation](INSTALLATION.md) and [Controls](CONTROLS.md). Use a separate test save and save before unfamiliar scripted interactions.
+
+## Settings and updates
+
+Open **Blood Money VR Settings** on the desktop or in Start, or run `Settings-BloodMoney-VR.cmd` inside the installed mod folder. In **Modifiers**, choose **Verified** or **Experimental**, change the checkboxes, and save. **Save & play** saves both pages and launches; **Save** saves the current page. Restart an already-running game to apply changes.
+
+**Every install, update and same-version reinstall replaces all seven mod INIs with this release's defaults**, including modifiers, calibration, VR/audio and weapon grips. Only the launcher's game path, connection and language are retained. Copy any manual adjustments you want to reapply before updating. Game files and saves are unchanged.
 
 ## Before playing
 
