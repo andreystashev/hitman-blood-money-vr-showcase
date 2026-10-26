@@ -1,5 +1,18 @@
 # Changelog
 
+## Alpha 4 — 0.1.8.173
+
+- Start SteamVR from the play launcher when needed and check for a connected, tracked headset and compositor before launching the game. Steam Link desktop streaming alone is not treated as a VR connection; an unavailable connection offers Retry without starting Blood Money.
+- Reapply the saved launcher connection after updates reset the mod INIs, so a saved SteamVR/VDXR choice is used by the next play launch.
+- Wait for the native game window and renderer before loading the VR camera/controller modules.
+- Report actual VR output readiness separately from successful DLL loading. Pending or failed headset output no longer produces a completed-launch message; F9 can retry output in the running game.
+- Correct OpenXR controller pointing orientation, including the upward hand/weapon angle seen through SteamVR and VDXR.
+- Keep SteamVR eye images in coherent stereo pairs instead of combining frames from different pairs.
+- Use the OpenXR host's headset playback endpoint when its runtime has no audio-device extension. Select Steam Streaming Speakers despite older Oculus/VD per-game preferences, and exclude Steam Streaming Microphone from automatic playback selection. The global Windows audio default is unchanged.
+- Retain the Alpha 3 modifier profile and replacement of all seven mod INIs on every install/reinstall.
+
+See the [Alpha 4 release notes and launch guide](RELEASE-NOTES-0.1.8.173.md). Hardware and mission coverage remains incomplete.
+
 ## Alpha 3 — 0.1.8.172
 
 - Add a connection/settings launcher with game-executable compatibility and headset/runtime checks. Quest Link/Air Link, Virtual Desktop/VDXR, SteamVR and system/custom OpenXR can be selected without changing the global Windows runtime setting.

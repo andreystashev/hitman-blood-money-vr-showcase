@@ -1,6 +1,6 @@
 # Controls and first steps
 
-These controls describe the default Alpha 3 profile (0.1.8.172) with Meta Touch controllers. All 14 visible modifiers are enabled except Physical crouching, including the Experimental combat modifiers. Physical magazine reloads and body pouches remain disabled.
+These controls describe the default Alpha 4 profile (0.1.8.173) with Meta Touch controllers. All 14 visible modifiers are enabled except Physical crouching, including the Experimental combat modifiers. Physical magazine reloads and body pouches remain disabled.
 
 ## Before playing
 
@@ -119,7 +119,7 @@ To open **VR settings**, pause the game, then hold **both stick buttons for abou
 | X/Y menu closes too soon | Keep the button held while browsing; release only to confirm. |
 | View or hands feel offset | Face forward and hold the right stick button for about 0.65 seconds to recenter. |
 | Headset view feels choppy | Check that V-Sync is disabled and the game window stays focused. |
-| Movement direction feels wrong during climbing or traversal | Recenter before entry; if it persists on Alpha 3, report the exact location and headset/setup. |
+| Movement direction feels wrong during climbing or traversal | Recenter before entry; if it persists on Alpha 4, report the exact location and headset/setup. |
 | Item falls even with grip held | Report the item and exact steps вЂ” this may be a bug. |
 
 See [Installation](INSTALLATION.md) for setup and [Troubleshooting](TROUBLESHOOTING.md) for logs and diagnostics.

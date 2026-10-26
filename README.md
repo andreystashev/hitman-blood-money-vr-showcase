@@ -2,9 +2,9 @@
 
 An unofficial VR mod for the **original 2006 PC version of Hitman: Blood Money**. Play with head tracking, motion-controller aiming, tracked hands and physical item handling.
 
-**Alpha 3 — 0.1.8.172.** A connection/settings launcher, Verified and Experimental modifiers, recent combat/inventory fixes and fresh configuration files on every installation. This is still an experimental alpha; mission and hardware coverage remains incomplete. [Release notes and modifier guide](RELEASE-NOTES-0.1.8.172.md).
+**Alpha 4 — 0.1.8.173.** Steam Link/SteamVR startup checks, corrected OpenXR controller pointing, SteamVR stereo-pair fixes and headset audio selection. The settings launcher and Verified / Experimental modifiers remain available. This is still an experimental alpha; mission and hardware coverage remains incomplete. [Release notes and launch guide](RELEASE-NOTES-0.1.8.173.md).
 
-[Download Alpha 3](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.172-alpha.3) · [Installation](INSTALLATION.md) · [Controls](CONTROLS.md) · [Known issues](STATUS.md) · [Report a bug](https://github.com/andreystashev/hitman-blood-money-vr-showcase/issues/new/choose)
+[Download Alpha 4](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.173-alpha.4) · [Installation](INSTALLATION.md) · [Controls](CONTROLS.md) · [Known issues](STATUS.md) · [Report a bug](https://github.com/andreystashev/hitman-blood-money-vr-showcase/issues/new/choose)
 
 ## Features
 
@@ -25,17 +25,20 @@ The default profile uses **ordinary button reloads with automatic empty-magazine
 | Game | An installed, legally owned copy of the original PC game; Steam is the primary test edition |
 | Tested setup | Meta Quest 3S, physical Touch controllers, Quest Link or Air Link |
 | Virtual Desktop | VDXR head and hand tracking checked locally |
+| Steam Link | Quest 3S through SteamVR checked locally; select SteamVR in Settings |
 | Other headsets | OpenXR is experimental; compatibility requires individual testing |
 
 The Meta path does not require SteamVR. This mod is **not for Blood Money — Reprisal**. Setup checks the executable and installs separately without replacing game files. The game and VR runtime are not bundled. Python and a compiler are not needed to play.
 
 ## Get started
 
-1. Download **BloodMoneyVR-0.1.8.172-Setup.exe** from Releases, not GitHub's automatic source-code archives.
+1. Download **BloodMoneyVR-0.1.8.173-Setup.exe** from Releases, not GitHub's automatic source-code archives.
 2. Launch the normal game once, then close it. Connect your headset and wake both controllers.
 3. Run Setup, select `HitmanBloodMoney.exe`, and choose a separate writable mod folder.
-4. Open **Blood Money VR Settings**, select your connection and game, then click **Save & play**. For later launches, use **Blood Money VR**. Keep the game window focused and close the VR desktop/dashboard overlay.
+4. Open **Blood Money VR Settings**, select your connection and game, then click **Save & play**. For Steam Link, select **SteamVR**: the launcher opens SteamVR if needed and checks the connected headset before starting the game. For later launches, use **Blood Money VR**. Keep the game window focused and close the VR desktop/dashboard overlay.
 5. Load a mission, face forward and hold the right stick button for about 0.65 seconds to recenter.
+
+With Steam Link, connect to this PC inside the headset first; a desktop stream alone is not a SteamVR VR connection. The game menu appears on a panel in VR; load a mission for the stereo gameplay view. No separate VD/SteamVR game entry is required.
 
 See [Installation](INSTALLATION.md) and [Controls](CONTROLS.md). Use a separate test save and save before unfamiliar scripted interactions.
 

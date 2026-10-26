@@ -8,11 +8,21 @@ If Setup rejects an EXE, report its edition and the displayed message. Do not re
 
 **Check headset** only runs a diagnostic; a runtime window appearing and closing does not launch the game. Use **Save & play** or the ordinary play shortcut. Optional VD/SteamVR shortcuts should target the installed `BloodMoneyVR.exe`. The launcher does not change the global Windows OpenXR runtime setting.
 
+## Steam Link shows a desktop, blank panel or no VR game
+
+Update to **Alpha 4 (0.1.8.173)**. In **Connection & game**, choose **SteamVR**, connect Steam Link to this PC from the Quest and use **Save & play**. The launcher opens SteamVR if needed and checks the actual headset connection before starting the game. If it reports that SteamVR is not ready or no headset is connected, the game has not been started: complete the VR connection, put on the headset and choose **Retry**.
+
+A remote desktop image is not proof of a working SteamVR VR session. First confirm that SteamVR sees the headset and controllers. Close other VR games. **Check headset** only inspects an existing connection; it does not open SteamVR or start Blood Money. You do not need to add Blood Money to SteamVR; an optional library shortcut should target the installed mod launcher, not the original game. See the [Steam Link launch steps](INSTALLATION.md#steam-link-on-quest).
+
+Once the mod starts, the game menu is meant to appear on a panel in VR. Load a mission to check the stereo gameplay view. Close the dashboard/Desktop overlay and keep the game window active. If the launcher reports **pending** output, put on the headset and return to the game; if output is disabled or failed after the game started, focus its window and press F9 to retry. Loading the mod into that same running game again is unnecessary. A modules-loaded message alone no longer counts as a completed VR launch.
+
+For connection failures, keep the PC and headset on the same trusted local network and check the firewall permissions for Steam and VR Server. If you use a VPN, check its local-network/split-tunneling rules on both devices; a VPN being installed does not establish that it caused the failure. The mod does not change network, firewall or VPN settings.
+
 ## Settings seem unchanged or the wrong copy starts
 
 Use **Blood Money VR Settings** on the desktop or in Start, or `Settings-BloodMoney-VR.cmd` in the installed folder. Modifier checkboxes are under **Modifiers → Verified / Experimental**. Save, then restart the game.
 
-Alpha 3 replaces all seven mod INIs on every install, update and same-version reinstall; old modifier choices, calibration and manual runtime/audio changes do not carry over. The game path, connection and launcher language remain. Manually copied test folders are separate from the registered installation: check a shortcut's target rather than starting an old test copy.
+Alpha 4 replaces all seven mod INIs on every install, update and same-version reinstall; old modifier choices, calibration and manual runtime/audio changes do not carry over. The game path, connection and launcher language remain. Manually copied test folders are separate from the registered installation: check a shortcut's target rather than starting an old test copy.
 
 The launch-error dialog now shows output from that launch. Full logs can contain older attempts. A loaded reload-support DLL does not mean physical reload is enabled; the normal profile reports **button reload**.
 
@@ -24,7 +34,7 @@ DLL loading can be blocked by antivirus software. If `LaunchCamera.exe` disappea
 
 ## Flat-screen launch / Meta runtime error 126
 
-Use **Alpha 3 (0.1.8.172)** if a previous build cannot find the Meta runtime outside
+Use **Alpha 4 (0.1.8.173)** if a previous build cannot find the Meta runtime outside
 the default installation folder. The mod now checks OculusBase, both installation
 registry views and the OVRService path for x86 tracking and the x64 compositor.
 The runtime remains installed by Meta; no Meta runtime DLL is bundled with the mod.
@@ -40,17 +50,25 @@ has started. Startup now reports headset readiness separately; a sleeping or
 unfocused headset can remain pending. Auto with `AllowBackendFallback=1` can
 recover from persistent Meta startup errors through OpenXR once per launch.
 The active PC OpenXR runtime must be installed and configured for the connection
-you use. Explicit `Backend=OpenXR` remains available. Simply opening SteamVR or
-Virtual Desktop does not configure that runtime for you. This update does not
-certify every headset/connection combination.
+you use. Explicit `Backend=OpenXR` remains available. For Steam Link or VDXR,
+choose that connection in Settings so the mod uses its installed runtime.
+Opening a desktop stream alone does not establish a VR session. This update
+does not certify every headset/connection combination.
 
 ## Sound stays on the PC
 
 A Quest 3 tester using USB confirmed that opening Control Panel Sound settings
 and enabling **Oculus Virtual Audio Device** restored headset audio after manual
 OpenXR selection. The taskbar volume control had not exposed that disabled
-device. This confirms that workaround for that setup; the new 0.1.8.170 automatic
-recovery path still needs a separate retest.
+device. That workaround applies to the Meta connection; Steam Link uses
+**Steam Streaming Speakers** instead.
+
+Alpha 4 fixes automatic playback selection when Steam, Oculus and Virtual
+Desktop audio devices are installed together. A runtime endpoint has priority;
+otherwise the OpenXR host can identify its selected headset output. Steam
+Streaming Microphone is excluded from automatic playback selection. Check the
+headset volume and the game's output/mute state in Windows Volume mixer if
+sessions are routed correctly but sound is still absent.
 
 The mod tries to route the game's audio to an available headset endpoint. Check
 `audioState`, `audioApplied` and `audioVerified` in `logs/camera-status.json`, or
@@ -76,7 +94,7 @@ file; the diagnostics collector omits it and raw endpoint IDs.
 
 ## Hands and controls
 
-Release all buttons, wake both controllers, face forward and hold right stick click to recenter. Report persistent drift with the triggering action; arm posing is still under development.
+Release all buttons, wake both controllers, face forward and hold right stick click to recenter. Alpha 4 corrects the OpenXR pointing orientation that could make SteamVR/VDXR hands or weapons point about 90 degrees upward. If that persists, confirm that the installed Alpha 4 shortcut is running and report the headset, connection and item; bending your wrists or changing weapon grips should not be needed to compensate. Weapon-specific foregrip alignment remains a separate known limitation.
 
 With default settings, A reloads the right-hand weapon on release, and an empty magazine reloads automatically when reserve ammunition is available. Disable **Automatic reload** in Modifiers for button-only reloads. Transfer a left-only gun to the right first. Use a short right-stick click for inventory. Physical magazine reloads and pouches remain disabled.
 
