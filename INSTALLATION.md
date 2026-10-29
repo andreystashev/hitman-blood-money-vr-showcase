@@ -5,14 +5,14 @@ Use the original PC game, not Reprisal. Launch it normally once. Steam is the pr
 ## Install and launch
 
 1. Connect your headset through Quest Link/Air Link, Virtual Desktop/VDXR or your selected SteamVR/OpenXR connection. Wake both controllers; install the required PC runtime separately.
-2. Download **BloodMoneyVR-0.1.8.173-Setup.exe** from [Alpha 4](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.173-alpha.4).
+2. Download **BloodMoneyVR-0.1.8.174-Setup.exe** from [Alpha 5](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.174-alpha.5).
 3. Run Setup and select the detected game or browse to `HitmanBloodMoney.exe`.
 4. Choose a writable mod folder separate from the game directory. Game files are not replaced.
 5. Close the ordinary game. Open **Blood Money VR Settings**, select the matching connection and game, then click **Save & play**. The Steam edition starts through Steam.
 6. Wear the headset, close dashboard/Desktop overlays and keep the game window active. F9 toggles headset output if needed.
 7. Load a mission and recenter by holding the right stick button for about 0.65 seconds.
 
-For later launches, use **Blood Money VR** without reopening settings. The selected connection is reapplied at each launch, including after an update resets the mod INIs. Read [Controls](CONTROLS.md) before playing.
+For later launches, use **Blood Money VR** without reopening settings. The launcher uses the connection saved in its settings. After updating, check your connection choice again because Setup starts with **Auto**. Read [Controls](CONTROLS.md) before playing.
 
 ## Steam Link on Quest
 
@@ -28,7 +28,9 @@ You do not need to add the game to VD or SteamVR. If you want a Steam/SteamVR li
 
 Open **Blood Money VR Settings** from the desktop or Start menu, or run `Settings-BloodMoney-VR.cmd` in the installed folder. In **Modifiers**, switch between **Verified** and **Experimental** to find the checkbox you want. Each option has a description. **Save & play** saves both pages and launches the game; **Save** only saves the current page. Restart the game after saving changes.
 
-All 14 visible modifiers are enabled except **Physical crouching**. Automatic reload and the Experimental physical combat options are enabled. Physical magazine reloads and body pouches remain disabled. Disable **Automatic reload** if you want empty magazines to wait for the reload button. Physical crouching is optional; with it off, use B. For seated play, sit and recenter with F7 or a held right-stick click.
+**Physical crouching and Snap turn are disabled by default.** Automatic reload and the Experimental physical combat options are enabled. Physical magazine reloads and body pouches remain disabled. Disable **Automatic reload** if you want empty magazines to wait for the reload button. With physical crouching off, use B. For seated play, sit and recenter with F7 or a held right-stick click.
+
+The default game renderer is **Original**. Optional **DXVK** is selected in Settings independently of the headset connection. Enable **Snap turn** under Modifiers if desired; its angle is configured by `hands.ini` → `[Input] SnapTurnDegrees=45` (5–180). Performance recording is disabled by default.
 
 ## Before playing
 
@@ -52,7 +54,7 @@ Audio defaults to `[Audio] Output=Auto` in the same file. The mod tries to selec
 
 Close the game and VR helpers, then run the newer Setup. Uninstalling first is not required. Setup removes the previous registered copy and updates its shortcuts, including when you choose a different mod folder. It does not wipe the entire folder or modify game files and saves. Updating an in-use mod folder is refused rather than forcibly closing the game.
 
-**Every installation, update and same-version reinstall replaces all seven mod INIs with the supplied profile:** `camera.ini`, `vr.ini`, `hands.ini`, `reload.ini`, `mod.ini`, `weapon-grips.ini` and `grip-tuning.ini`. This resets modifiers, manual VR/audio choices, calibration and weapon-grip adjustments. Only `launcher.ini` preferences — game path, connection and language — are retained. Copy any manual adjustments you want before updating, then reapply them afterward. Logs and unknown user files are not erased.
+**Every installation, update and same-version reinstall replaces all seven mod INIs with the supplied profile:** `camera.ini`, `vr.ini`, `hands.ini`, `reload.ini`, `mod.ini`, `weapon-grips.ini` and `grip-tuning.ini`. This resets modifiers, manual VR/audio choices, calibration and weapon-grip adjustments. Setup also replaces `launcher.ini` with the game and language selected in Setup, **Auto** connection and **Original** renderer. Choose your preferred connection again after updating. Copy any manual adjustments you want before updating, then reapply them afterward. Logs and unknown user files are not erased.
 
 Windows per-application audio preferences can remain after the game exits. The mod keeps a private recovery journal and can restore its own prior preference on the next launch with `Output=Default` or while VR is inactive. Later user changes take priority. To remove the mod permanently, select the desired output in Windows Volume mixer if needed.
 
@@ -64,4 +66,4 @@ Rerun Setup to change the selected game. Uninstall through Windows Installed App
 
 A SHA256 file is provided beside Setup. Compare it with PowerShell's `Get-FileHash -Algorithm SHA256`. The alpha is unsigned; use files from this repository's release page.
 
-The full [Alpha 4 release notes](RELEASE-NOTES-0.1.8.173.md) include the launch and modifier workflow. [Alpha 3 notes](RELEASE-NOTES-0.1.8.172.md) describe the earlier gameplay changes. The ZIP contains the same installer and English/Russian instructions; it is not a portable game installation.
+See the [Alpha 5 release notes](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.174-alpha.5) and [changelog](CHANGELOG.md). The ZIP contains the same installer and English instructions; it is not a portable game installation.

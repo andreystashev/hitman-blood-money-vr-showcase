@@ -1,5 +1,14 @@
 # Changelog
 
+## Alpha 5 — 0.1.8.174
+
+- Preserve source-frame dimensions through VR capture/transport up to 4096×4096 per eye, with proportional reduction for larger frames.
+- Add optional snap turning with a configurable angle and neutral-stick rearming; retain turning during reload animations.
+- Prevent Settings from taking focus after a successful Save & play launch.
+- Offer optional DXVK alongside the default Original renderer and reduce CPU overhead when publishing large frames.
+- Disable snap turning and performance recording by default. Keep the release's clean-settings installation/update behavior.
+- Publish English-only documentation and release descriptions. Local checks covered Meta, VDXR and SteamVR with Original and DXVK; mission and hardware coverage remains incomplete.
+
 ## Alpha 4 — 0.1.8.173
 
 - Start SteamVR from the play launcher when needed and check for a connected, tracked headset and compositor before launching the game. Steam Link desktop streaming alone is not treated as a VR connection; an unavailable connection offers Retry without starting Blood Money.

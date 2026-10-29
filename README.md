@@ -2,9 +2,9 @@
 
 An unofficial VR mod for the **original 2006 PC version of Hitman: Blood Money**. Play with head tracking, motion-controller aiming, tracked hands and physical item handling.
 
-**Alpha 4 — 0.1.8.173.** Steam Link/SteamVR startup checks, corrected OpenXR controller pointing, SteamVR stereo-pair fixes and headset audio selection. The settings launcher and Verified / Experimental modifiers remain available. This is still an experimental alpha; mission and hardware coverage remains incomplete. [Release notes and launch guide](RELEASE-NOTES-0.1.8.173.md).
+**Alpha 5 — 0.1.8.174.** Full-resolution VR capture, optional snap turning, and a fix for Settings taking focus after Save & play. Original remains the default renderer; DXVK is optional. Snap turn and performance recording are disabled by default. This remains an experimental alpha; mission and hardware coverage is incomplete. [Release notes](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.174-alpha.5).
 
-[Download Alpha 4](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.173-alpha.4) · [Installation](INSTALLATION.md) · [Controls](CONTROLS.md) · [Known issues](STATUS.md) · [Report a bug](https://github.com/andreystashev/hitman-blood-money-vr-showcase/issues/new/choose)
+[Download Alpha 5](https://github.com/andreystashev/hitman-blood-money-vr-showcase/releases/tag/v0.1.8.174-alpha.5) · [Installation](INSTALLATION.md) · [Controls](CONTROLS.md) · [Known issues](STATUS.md) · [Report a bug](https://github.com/andreystashev/hitman-blood-money-vr-showcase/issues/new/choose)
 
 ## Features
 
@@ -15,7 +15,15 @@ An unofficial VR mod for the **original 2006 PC version of Hitman: Blood Money**
 - Hand-adjacent action/item menus, inventory, map and briefing.
 - Adapted mission interactions, outfit changes, body handling and scripted cameras.
 
-The default profile uses **ordinary button reloads with automatic empty-magazine reload enabled**, plus independent grip selection for each hand in inventory. All 14 visible modifiers are enabled except **Physical crouching**. The Experimental combat modifiers are enabled too; disable them in Settings if unwanted. Physical magazine reloads and body pouches remain disabled. Individual grips and scripted actions can still behave incorrectly.
+The default profile uses **ordinary button reloads with automatic empty-magazine reload enabled**, plus independent grip selection for each hand in inventory. **Physical crouching and Snap turn are off by default.** Experimental combat modifiers can be changed separately in Settings. Physical magazine reloads, body pouches and debug weapon grants remain disabled. Individual grips and scripted actions can still behave incorrectly.
+
+## Resolution and turning
+
+The VR capture and transport preserve the game's source dimensions up to **4096×4096 per eye**; larger sources are reduced proportionally. Set resolution in the game. The final headset image also depends on runtime scaling and streaming quality. **Original** is the default game renderer; optional **DXVK** is selected independently of the headset connection in Settings.
+
+Enable **Snap turn** in Settings → Modifiers for stepped right-stick turning. The default angle is 45°, configurable in `hands.ini` under `[Input]` with `SnapTurnDegrees` (5–180). Return the stick to center between turns. It also works during reload animations.
+
+Performance recording is off by default. For diagnostics, set `mod.ini` → `[Diagnostics] PerformanceLogging=1`; set it back to `0` to stop recording without restarting.
 
 ## Requirements
 
@@ -32,7 +40,7 @@ The Meta path does not require SteamVR. This mod is **not for Blood Money — Re
 
 ## Get started
 
-1. Download **BloodMoneyVR-0.1.8.173-Setup.exe** from Releases, not GitHub's automatic source-code archives.
+1. Download **BloodMoneyVR-0.1.8.174-Setup.exe** from Releases, not GitHub's automatic source-code archives.
 2. Launch the normal game once, then close it. Connect your headset and wake both controllers.
 3. Run Setup, select `HitmanBloodMoney.exe`, and choose a separate writable mod folder.
 4. Open **Blood Money VR Settings**, select your connection and game, then click **Save & play**. For Steam Link, select **SteamVR**: the launcher opens SteamVR if needed and checks the connected headset before starting the game. For later launches, use **Blood Money VR**. Keep the game window focused and close the VR desktop/dashboard overlay.
@@ -46,7 +54,7 @@ See [Installation](INSTALLATION.md) and [Controls](CONTROLS.md). Use a separate 
 
 Open **Blood Money VR Settings** on the desktop or in Start, or run `Settings-BloodMoney-VR.cmd` inside the installed mod folder. In **Modifiers**, choose **Verified** or **Experimental**, change the checkboxes, and save. **Save & play** saves both pages and launches; **Save** saves the current page. Restart an already-running game to apply changes.
 
-**Every install, update and same-version reinstall replaces all seven mod INIs with this release's defaults**, including modifiers, calibration, VR/audio and weapon grips. Only the launcher's game path, connection and language are retained. Copy any manual adjustments you want to reapply before updating. Game files and saves are unchanged.
+**Every install, update and same-version reinstall replaces all seven mod INIs with this release's defaults**, including modifiers, calibration, VR/audio and weapon grips. Setup also creates fresh launcher settings: the game and language selected in Setup, **Auto** connection and **Original** renderer. Check your connection choice again after updating. Copy any manual adjustments you want to reapply before updating. Game files and saves are unchanged.
 
 ## Before playing
 

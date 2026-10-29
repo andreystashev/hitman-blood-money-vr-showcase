@@ -22,7 +22,7 @@ For connection failures, keep the PC and headset on the same trusted local netwo
 
 Use **Blood Money VR Settings** on the desktop or in Start, or `Settings-BloodMoney-VR.cmd` in the installed folder. Modifier checkboxes are under **Modifiers → Verified / Experimental**. Save, then restart the game.
 
-Alpha 4 replaces all seven mod INIs on every install, update and same-version reinstall; old modifier choices, calibration and manual runtime/audio changes do not carry over. The game path, connection and launcher language remain. Manually copied test folders are separate from the registered installation: check a shortcut's target rather than starting an old test copy.
+Every release replaces all seven mod INIs on every install, update and same-version reinstall; old modifier choices, calibration and manual runtime/audio changes do not carry over. Fresh launcher settings use the game and language selected in Setup, Auto connection and Original renderer. Check your connection choice again after updating. Manually copied test folders are separate from the registered installation: check a shortcut's target rather than starting an old test copy.
 
 The launch-error dialog now shows output from that launch. Full logs can contain older attempts. A loaded reload-support DLL does not mean physical reload is enabled; the normal profile reports **button reload**.
 

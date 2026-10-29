@@ -1,6 +1,6 @@
 # Controls and first steps
 
-These controls describe the default Alpha 4 profile (0.1.8.173) with Meta Touch controllers. All 14 visible modifiers are enabled except Physical crouching, including the Experimental combat modifiers. Physical magazine reloads and body pouches remain disabled.
+These controls describe the default Alpha 5 profile (0.1.8.174) with Meta Touch controllers. Physical crouching and Snap turn are disabled by default. Experimental combat modifiers can be changed separately in Settings. Physical magazine reloads and body pouches remain disabled.
 
 ## Before playing
 
@@ -15,10 +15,12 @@ These controls describe the default Alpha 4 profile (0.1.8.173) with Meta Touch 
 | --- | --- |
 | Left stick | Walk and strafe relative to your viewing direction |
 | Click left stick | Toggle running; disabled while moving a body |
-| Right stick left/right | Smooth turn |
+| Right stick left/right | Smooth turn, or stepped turning when Snap turn is enabled |
 | B | Toggle crouching |
 | Physically crouch | Crouch only when the Physical crouching modifier is enabled; off by default |
 | Hold right stick button for about 0.65 seconds | Recenter while facing forward |
+
+**Snap turn:** enable it in Settings → Modifiers. Set the angle in `hands.ini`, under `[Input]`, with `SnapTurnDegrees=45` (5–180 degrees). Return the stick to center between turns. Turning remains available during reload animations. Smooth turning remains the default.
 
 **Traversal:** the first-person wall-hug camera faces outward, and horizontal input follows the displayed left/right direction. Observer cameras choose clear viewpoints where possible. Mission-specific climbing/window transitions still need wider testing; save before these sections.
 
@@ -45,7 +47,7 @@ A single item instance cannot be held twice. Choosing an already-held item trans
 
 **Painkillers and adrenaline:** highlight the item, hold the chosen hand's grip and close inventory. The game applies a dose directly; it does not become a held item, and your weapon is retained. Release grip before closing to cancel the selection.
 
-## X/Y menus вЂ” hold, select, release
+## X/Y menus — hold, select, release
 
 These menus appear **beside your hand**, rather than as a large panel in front of your face.
 
@@ -119,8 +121,8 @@ To open **VR settings**, pause the game, then hold **both stick buttons for abou
 | X/Y menu closes too soon | Keep the button held while browsing; release only to confirm. |
 | View or hands feel offset | Face forward and hold the right stick button for about 0.65 seconds to recenter. |
 | Headset view feels choppy | Check that V-Sync is disabled and the game window stays focused. |
-| Movement direction feels wrong during climbing or traversal | Recenter before entry; if it persists on Alpha 4, report the exact location and headset/setup. |
-| Item falls even with grip held | Report the item and exact steps вЂ” this may be a bug. |
+| Movement direction feels wrong during climbing or traversal | Recenter before entry; if it persists on Alpha 5, report the exact location and headset/setup. |
+| Item falls even with grip held | Report the item and exact steps — this may be a bug. |
 
 See [Installation](INSTALLATION.md) for setup and [Troubleshooting](TROUBLESHOOTING.md) for logs and diagnostics.
 
@@ -134,6 +136,6 @@ For example, turn **Automatic reload** off for button-only reloads; turn **Physi
 
 For seated play, sit comfortably and recenter with F7 or the held right-stick click. With Physical crouching off, B controls crouching while your head remains tracked. No separate seated-mode INI edit is needed. Recenter again after switching between sitting and standing.
 
-**Installing, updating or reinstalling resets all seven mod INIs to the release defaults**, including these modifier choices and calibration. Only the launcher's game path, connection and language are retained. See [Installation](INSTALLATION.md) before updating. Weapon-specific support grips can still be imperfect.
+**Installing, updating or reinstalling resets all seven mod INIs to the release defaults**, including these modifier choices and calibration. Setup also creates fresh launcher settings with the selected game/language, Auto connection and Original renderer. Check your connection choice again afterward. See [Installation](INSTALLATION.md) before updating. Weapon-specific support grips can still be imperfect.
 
 Turn the right palm toward your face for the Y reminder. Hold Y to see contextual controls for both hands. During supported third-person actions, a short inventory-stick click cycles camera presets.
